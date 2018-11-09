@@ -1,9 +1,9 @@
 /* 
- * Stepper v3.0.8 - 2015-04-04 
+ * Stepper v3.0.8 - 2018-11-09 
  * A jQuery plugin for cross browser number inputs. Part of the Formstone Library. 
  * http://classic.formstone.it/stepper/ 
  * 
- * Copyright 2015 Ben Plum; MIT Licensed 
+ * Copyright 2018 Ben Plum; MIT Licensed 
  */ 
 
 ;(function ($, window) {
@@ -198,7 +198,7 @@
 		if (!data.$input.is(':disabled') && !data.$stepper.hasClass("disabled")) {
 			var change = $(e.target).hasClass("up") ? data.step : -data.step;
 
-			data.timer = _startTimer(data.timer, 125, function() {
+			data.timer = _startTimer(data.timer, 500, function() {
 				_step(data, change, false);
 			});
 			_step(data, change);
